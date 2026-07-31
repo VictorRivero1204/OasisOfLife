@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("../imagenes/fondo_pagina.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Cinzel", serif;
+}
+
+header{
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: rgba(165, 128, 70, 0.50);
+}
+
+.logo img{
+    width:150px;
+    height:auto;
+    display:block;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #2B2933;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+section{
+    padding: 60px 0;
+}
+
+.hero{
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("../imagenes/fachada.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text{
+    width: 500px;
+    text-align: center;
+}
+
+.hero h1{
+    font-size: 60px;
+    color: #fff;
+}
+
+.hero p{
+    font-size: 22px;
+    margin: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.about{
+    padding:80px;
+    text-align:center;
+    background:transparent;
+}
+
+
+.about h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px 8%;
+    gap:40px;
+}
+
+.slider, .content{
+    width:50%;
+}
+
+.slider{
+    position:relative;
+    height:500px;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.about-slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.about-slide.active{
+    opacity:1;
+}
+
+.content{
+    position:relative;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+}
+
+.text-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.text-slide.active{
+    opacity: 1;
+}
+
+.content h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.services{
+    padding:80px;
+    text-align:center;
+}
+
+
+.carousel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.services h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.carousel-container{
+    width: 700px;
+    height: 650px;
+    overflow:hidden;
+    position: relative;
+}
+
+.slide{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity:0;
+    transition: opacity 1.5s ease;
+}
+
+.slide.active{
+    opacity: 1;
+}
+
+button{
+    padding:10px 20px;
+    font-size:25px;
+    cursor:pointer;
+    border-radius: 25%;
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:50px;
+}
+
+.footer-container{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-container > div{
+    flex:1;
+}
+
+footer img{
+    width:350px;
+}
+
+footer h3{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+footer p{
+    max-width: 250px;
+    line-height: 1.6;
+}
+
+.location a{
+    display:  flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.location a:hover{
+    transform: translateX(8px);
+}
+
+.contact,
+.social-links{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact a,
+.social-links a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.contact i,
+.social-links i{
+    font-size: 22px;
+}
+
+.contact a:hover,
+.social-links a:hover{
+    transform: translateX(8px);
+}
