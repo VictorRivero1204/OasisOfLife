@@ -69,3 +69,12 @@ prev.addEventListener("click", function(){
 });
 
 showSlide(currentSlide);
+
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", function(){
+
+    nav.classList.toggle("active");
+
+});
