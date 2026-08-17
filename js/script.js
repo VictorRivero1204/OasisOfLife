@@ -72,9 +72,22 @@ showSlide(currentSlide);
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
+const menuIcon = menuToggle.querySelector("i");
 
 menuToggle.addEventListener("click", function(){
 
     nav.classList.toggle("active");
+
+    if(nav.classList.contains("active")){
+
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+
+    } else {
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+    }
 
 });
