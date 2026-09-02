@@ -25,7 +25,7 @@ function cambiarImagen(){
 
 }
 
-setInterval(cambiarImagen,10000);
+setInterval(cambiarImagen,15000);
 
 const slides = document.querySelectorAll(".slide");
 
