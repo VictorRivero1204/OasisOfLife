@@ -660,3 +660,39 @@ footer p{
     }
 
 }
+
+
+/* Booking request form below the hero call to action */
+.booking-request {
+  width: min(920px, calc(100% - 40px));
+  margin: 48px auto 72px;
+  padding: clamp(26px, 5vw, 52px);
+  color: #3a3026;
+  background: rgba(250, 247, 239, 0.96);
+  border: 1px solid rgba(165, 128, 70, 0.48);
+  border-radius: 12px;
+  box-shadow: 0 12px 34px rgba(31, 24, 17, 0.16);
+}
+.booking-request h2 { margin: 0 0 12px; text-align: center; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+.booking-request > p { max-width: 650px; margin: 0 auto 26px; text-align: center; line-height: 1.6; }
+.booking-request-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.booking-field { display: flex; flex-direction: column; gap: 7px; font-family: Arial, sans-serif; font-size: 0.95rem; }
+.booking-field-full { grid-column: 1 / -1; }
+.booking-field input, .booking-field select, .booking-field textarea {
+  width: 100%; min-height: 48px; padding: 12px 14px; color: #2d2924; background: #fff;
+  border: 1px solid #b8aa95; border-radius: 6px; font: inherit;
+}
+.booking-field textarea { min-height: 96px; resize: vertical; }
+.booking-consent { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: 10px; font: 0.9rem/1.5 Arial, sans-serif; }
+.booking-consent input { margin-top: 4px; }
+.booking-submit { grid-column: 1 / -1; justify-self: center; min-height: 50px; padding: 12px 28px; color: #fff; background: #98733a; border: 0; border-radius: 6px; font: 600 1rem Arial, sans-serif; cursor: pointer; }
+.booking-submit:hover { background: #785a2e; }
+.booking-submit:disabled { opacity: .65; cursor: wait; }
+#booking-form-status { grid-column: 1 / -1; min-height: 1.5em; text-align: center; font: 0.95rem/1.5 Arial, sans-serif; }
+.booking-call-fallback { display: block; margin-top: 10px; text-align: center; font: 0.95rem Arial, sans-serif; }
+.booking-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 640px) {
+  .booking-request { width: calc(100% - 24px); margin: 32px auto 48px; padding: 24px 18px; }
+  .booking-request-form { grid-template-columns: 1fr; }
+  .booking-field-full, .booking-consent, .booking-submit, #booking-form-status { grid-column: 1; }
+}
