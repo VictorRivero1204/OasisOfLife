@@ -40,8 +40,44 @@
 
             <p>
                 The space that you need</p><a class="hero-book-button" href="tel:+18456389772" aria-label="Call Oasis of Life NY to book at +1 (845) 638-9772">BOOK NOW</a>
+
         </div>
     </section>
+
+
+        <section id="booking-inquiry" class="booking-inquiry" aria-labelledby="booking-inquiry-title">
+            <div class="booking-inquiry-card">
+                <p class="booking-eyebrow">PERSONALIZED CARE STARTS HERE</p>
+                <h2 id="booking-inquiry-title">Request an Appointment</h2>
+                <p class="booking-intro">Tell us what you’re interested in and our team will call you to arrange your visit.</p>
+                <form id="booking-form" action="https://script.google.com/macros/s/AKfycbzzSPnN64cUdVoT7F3RHR6Ue0Nfb2Lx7tja2oDhNBxeePeKiiqzJhJnuCcOSux8C29QrA/exec" method="post" target="booking-response-frame">
+                    <div class="booking-form-grid">
+                        <label>Your name <span>*</span><input name="name" autocomplete="name" maxlength="100" required></label>
+                        <label>Phone number <span>*</span><input name="phone" type="tel" autocomplete="tel" maxlength="40" required></label>
+                        <label>Email (optional)<input name="email" type="email" autocomplete="email" maxlength="254"></label>
+                        <label>Service you’re interested in <span>*</span>
+                            <select name="service" required>
+                                <option value="" selected disabled>Select a service</option>
+                                <option>Facial Microneedling</option>
+                                <option>Salmon PDRN Skin Rejuvenation</option>
+                                <option>Chemical Peels</option>
+                                <option>Body Contouring &amp; Muscle Toning</option>
+                                <option>Laser Hair Removal</option>
+                                <option>Other / Not sure yet</option>
+                            </select>
+                        </label>
+                        <label class="booking-full">Preferred day or time (optional)<input name="preferredTime" maxlength="100" placeholder="For example: weekday afternoons"></label>
+                        <label class="booking-full">Anything else we should know? (optional)<textarea name="note" rows="3" maxlength="500" placeholder="Please don’t include private health information."></textarea></label>
+                    </div>
+                    <label class="booking-honeypot" aria-hidden="true">Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
+                    <label class="booking-consent"><input type="checkbox" name="consent" value="yes" required><span>I agree that Oasis of Life SPA may contact me about this appointment request.</span></label>
+                    <button class="booking-submit" type="submit">Request a Call</button>
+                    <p id="booking-form-status" class="booking-form-status" role="status" aria-live="polite"></p>
+                </form>
+                <iframe name="booking-response-frame" title="Form submission response" class="booking-response-frame"></iframe>
+                <p class="booking-call-alternative">Need help sooner? <a href="tel:+18456389772">Call (845) 638-9772</a></p>
+            </div>
+        </section>
 
     <section id="about" class="about-section">
 
