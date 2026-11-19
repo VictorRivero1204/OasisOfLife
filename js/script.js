@@ -91,3 +91,43 @@ menuToggle.addEventListener("click", function(){
     }
 
 });
+
+// Booking inquiry form
+const bookingForm = document.getElementById("booking-form");
+if (bookingForm) {
+  const bookingStatus = document.getElementById("booking-form-status");
+  const bookingButton = bookingForm.querySelector('button[type="submit"]');
+  const bookingFrame = document.querySelector('iframe[name="booking-response-frame"]');
+  let bookingSubmitted = false;
+
+  window.addEventListener("message", function (event) {
+    if (!bookingFrame || event.source !== bookingFrame.contentWindow) return;
+    if (event.origin !== "https://script.google.com" && !event.origin.endsWith(".googleusercontent.com")) return;
+    const result = event.data;
+    if (!bookingSubmitted || !result || result.type !== "oasis-booking-result") return;
+    bookingStatus.textContent = result.message;
+    bookingButton.disabled = false;
+    bookingButton.textContent = "Request a Call";
+    if (result.success) bookingForm.reset();
+    bookingSubmitted = false;
+  });
+
+  bookingForm.addEventListener("submit", function (event) {
+    if (!bookingForm.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+    bookingSubmitted = true;
+    bookingStatus.textContent = "Sending your request…";
+    bookingButton.disabled = true;
+    bookingButton.textContent = "Sending…";
+    window.setTimeout(function () {
+      if (bookingSubmitted) {
+        bookingStatus.textContent = "Please call (845) 638-9772 if you don’t see a confirmation shortly.";
+        bookingButton.disabled = false;
+        bookingButton.textContent = "Request a Call";
+        bookingSubmitted = false;
+      }
+    }, 12000);
+  });
+}
