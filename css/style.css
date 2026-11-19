@@ -696,3 +696,27 @@ footer p{
   .booking-request-form { grid-template-columns: 1fr; }
   .booking-field-full, .booking-consent, .booking-submit, #booking-form-status { grid-column: 1; }
 }
+
+
+/* Match the appointment form markup */
+.booking-inquiry { width: 100%; padding: 42px 20px 64px; }
+.booking-inquiry-card { width: min(920px, 100%); margin: 0 auto; padding: clamp(24px, 5vw, 48px); color: #3a3026; background: rgba(250,247,239,.97); border: 1px solid rgba(165,128,70,.48); border-radius: 12px; box-shadow: 0 12px 34px rgba(31,24,17,.16); }
+.booking-eyebrow { margin: 0 0 8px; color: #80602e; text-align: center; font: 700 .78rem Arial,sans-serif; letter-spacing: .14em; }
+#booking-inquiry-title { margin: 0 0 12px; text-align: center; font-size: clamp(1.7rem,3vw,2.3rem); }
+.booking-intro { max-width: 650px; margin: 0 auto 26px; text-align: center; line-height: 1.6; }
+.booking-form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+#booking-form label:not(.booking-honeypot):not(.booking-consent) { display: flex; flex-direction: column; gap: 7px; font: .95rem Arial,sans-serif; }
+#booking-form label span { color: #775728; }
+#booking-form input:not([type="checkbox"]), #booking-form select, #booking-form textarea { width: 100%; min-height: 48px; padding: 12px 14px; color: #2d2924; background: #fff; border: 1px solid #b8aa95; border-radius: 6px; font: 1rem Arial,sans-serif; }
+#booking-form textarea { min-height: 96px; resize: vertical; }
+.booking-full { grid-column: 1 / -1; }
+.booking-consent { margin-top: 16px; display: flex; align-items: flex-start; gap: 10px; font: .9rem/1.5 Arial,sans-serif; }
+.booking-consent input { flex: 0 0 auto; margin-top: 4px; }
+.booking-submit { display: block; margin: 18px auto 0; min-height: 50px; padding: 12px 28px; color: #fff; background: #98733a; border: 0; border-radius: 6px; font: 600 1rem Arial,sans-serif; cursor: pointer; }
+.booking-submit:hover { background: #785a2e; }
+.booking-submit:disabled { opacity: .65; cursor: wait; }
+#booking-form-status { min-height: 1.5em; margin: 12px 0 0; text-align: center; font: .95rem/1.5 Arial,sans-serif; }
+.booking-response-frame { position: absolute; width: 1px; height: 1px; border: 0; clip: rect(0,0,0,0); }
+.booking-call-alternative { margin: 18px 0 0; text-align: center; font: .95rem Arial,sans-serif; }
+.booking-call-alternative a { color: #60481f; font-weight: 700; }
+@media (max-width: 640px) { .booking-inquiry { padding: 28px 12px 44px; } .booking-inquiry-card { padding: 24px 18px; } .booking-form-grid { grid-template-columns: 1fr; } .booking-full { grid-column: 1; } }
