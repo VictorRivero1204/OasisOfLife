@@ -720,3 +720,30 @@ footer p{
 .booking-call-alternative { margin: 18px 0 0; text-align: center; font: .95rem Arial,sans-serif; }
 .booking-call-alternative a { color: #60481f; font-weight: 700; }
 @media (max-width: 640px) { .booking-inquiry { padding: 28px 12px 44px; } .booking-inquiry-card { padding: 24px 18px; } .booking-form-grid { grid-template-columns: 1fr; } .booking-full { grid-column: 1; } }
+
+
+/* Keep the native date/time control inside the mobile form card. */
+#booking-form label:not(.booking-honeypot):not(.booking-consent) { min-width: 0; }
+#booking-form input[type="datetime-local"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px 10px;
+  text-align: left;
+  -webkit-appearance: none;
+}
+@media (max-width: 640px) {
+  .booking-form-grid > label { min-width: 0; }
+  #booking-form input[type="datetime-local"] {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 8px;
+    font-size: 16px;
+  }
+  #booking-form input[type="datetime-local"]::-webkit-date-and-time-value {
+    min-height: 1.5em;
+    text-align: left;
+  }
+}
