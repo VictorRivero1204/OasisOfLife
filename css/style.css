@@ -803,3 +803,16 @@ footer p{
 @media (max-width: 480px) {
   #services { padding-top: 28px; }
 }
+
+
+/* Remove the leftover full-viewport blank area at the end of About. */
+#about { min-height: auto; padding-bottom: clamp(40px, 5vw, 56px); }
+#services { padding-top: clamp(32px, 3.5vw, 44px); }
+@media (max-width: 768px) {
+  #about { padding-bottom: 32px; }
+  #services { padding-top: 28px; }
+}
+@media (max-width: 480px) {
+  #about { padding-bottom: 26px; }
+  #services { padding-top: 24px; }
+}
