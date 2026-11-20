@@ -793,3 +793,13 @@ footer p{
   #services .prev { left: 6px; }
   #services .next { right: 6px; }
 }
+
+
+/* Tighten the transition into Our Services for a cleaner page rhythm. */
+#services { padding-top: clamp(36px, 4.5vw, 56px); }
+@media (max-width: 768px) {
+  #services { padding-top: 32px; }
+}
+@media (max-width: 480px) {
+  #services { padding-top: 28px; }
+}
