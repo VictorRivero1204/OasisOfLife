@@ -747,3 +747,49 @@ footer p{
     text-align: left;
   }
 }
+
+
+/* Enlarge the service posters so their baked-in treatment text is readable. */
+#services .carousel {
+  position: relative;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  gap: 0;
+}
+#services .carousel-container {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1000px;
+  height: min(82vh, 900px);
+  min-height: 560px;
+}
+#services .slide { object-fit: contain; }
+#services .carousel > button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 56px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(43,41,51,.72);
+}
+#services .prev { left: 10px; }
+#services .next { right: 10px; }
+@media (max-width: 768px) {
+  #services { padding: 52px 10px; }
+  #services .carousel-container { height: min(72vh, 720px); min-height: 480px; }
+  #services .carousel > button { width: 42px; height: 48px; }
+}
+@media (max-width: 480px) {
+  #services { padding: 44px 6px; }
+  #services .carousel-container { height: min(70vh, 620px); min-height: 400px; }
+  #services .prev { left: 6px; }
+  #services .next { right: 6px; }
+}
